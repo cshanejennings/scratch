@@ -17,27 +17,8 @@ Message-->> User: Update user session
 ## Related Classes
 ```mermaid
 classDiagram
-User <|-- Thread
-Thread<|-- Message
-
 class User{
-  #first_name: String
-  #last_name: String
-  #email: String
-  #sms_number: String
-  #sms_name: String
-  #company_name: String
-  -password: String
-}
-
-class Thread{
-  - id: int
-  - user_id: int
-  - due: ts
-  - created_at: ts
-  - updated_at: ts
-  - deleted_at: ts
-  + messages(): HasMany
+  +id: String
 }
 
 ```
