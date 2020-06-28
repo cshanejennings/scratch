@@ -40,28 +40,4 @@ class Thread{
   + messages(): HasMany
 }
 
-class Message{
-- id: int
-- thread_id: int
-- from: phone
-- to: phone
-- msg: string
-- created_at: ts
-- deleted_at: ts
-}
-
-class TwilioSMS{
-+AccountSid: String
-+SmsStatus: String
-+To: String
-+From: String
-+Body: String
-+SmsMessageSid: String
-+NumMedia: String
-+NumSegments: String
-+MessageSid: String
-+ApiVersion: String
-+MediaUrlX: String
-}
-
 ```
