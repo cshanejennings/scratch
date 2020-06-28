@@ -1,22 +1,8 @@
-## Incoming message diagram
+## Mermaid Test
 can be viewed with the [GitHub + Mermaid Chrome Extension](https://chrome.google.com/webstore/detail/github-%2B-mermaid/goiiopgdnkogdbjmncgedmgpoajilohe/related?hl=en)
 
+## classDiagram
 ```mermaid
-sequenceDiagram
-Note right of SMS: After Authentication
-SMS ->> User: Id by "To" phone number
-SMS-->>Message: Search for last "From" number
-Note right of Thread: Thread created if<br> it doesn't exist
-Message-->> Thread: Get last thread_id
-Note right of Thread: Thread updated_at<br> adjusted
-Thread-->> Message: New Message Created
-Message-->> User: Update user session
-
-```
-
-## Related Classes
-```mermaid
-classDiagram
 classDiagram
 Class01 <|-- AveryLongClass : Cool
 Class03 *-- Class04
@@ -32,4 +18,39 @@ Class01 : int chimp
 Class01 : int gorilla
 Class08 <--> C2: Cool label
 
+```
+
+## Gant Example
+```mermaid
+gantt
+dateFormat  YYYY-MM-DD
+title Adding GANTT diagram to mermaid
+excludes weekdays 2014-01-10
+
+section A section
+Completed task            :done,    des1, 2014-01-06,2014-01-08
+Active task               :active,  des2, 2014-01-09, 3d
+Future task               :         des3, after des2, 5d
+Future task2               :         des4, after des3, 5d
+
+```
+
+## gitGraph
+```mermaid
+gitGraph:
+options
+{
+    "nodeSpacing": 150,
+    "nodeRadius": 10
+}
+end
+commit
+branch newbranch
+checkout newbranch
+commit
+commit
+checkout master
+commit
+commit
+merge newbranch
 ```
